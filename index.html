@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <H1>Your Library</H1>
+        <div class="profile">
+            <div class="profilePic"></div>
+            <input type="button" value="Log Out">
+        </div>
+    </div>
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container" id="form">
+          <h1>New Book</h1>
+            
+          <div class="titled">
+              <label for="title"><b>Book Title</b></label>
+              <input type="text" placeholder="Enter Book Title" name="title" required>
+          </div>
+      
+          <div class="authord">
+              <label for="author"><b>Author</b></label>
+              <input type="text" placeholder="Enter Author Name" name="author" required>
+          </div>
+
+          <div class="noPd">
+              <label for="noP"><b>Number of Pages</b></label>
+              <input type="number" placeholder="Number of Pages" name="noP" required>
+          </div>
+          
+          <div class="readd">
+            <label for="read"><b>Already Read it</b></label>
+            <input type="checkbox"  name="read" value="yes" checked>
+          </div>
+
+          <div class="btns">
+              <button type="submit" class="btn">Submit</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </div>
+        </form>
+    </div>
+    <div class="content">
+        <button onclick="openForm()">Add Book</button>
+        <div class="books" id="catalogue">
+            
+        
+        </div>
+    </div>
+    <div class="footer">Made by m-ehab2 as a part of the Odin Project</div>
+</body>
+<script src="script.js"></script>
+</html>
